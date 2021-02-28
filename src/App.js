@@ -1,10 +1,18 @@
 import React from 'react';
+import Header from './components/Header';
+import Input from './components/Input';
+import Footer from './components/Footer';
+import Table from './components/Table';
 
 class App extends React.Component {
+
     render() {
         return (
             <div>
-                <h1>This is a test</h1>
+                <Header />
+                <Input />
+                <Table />
+                <Footer />
             </div>
         )
     }
