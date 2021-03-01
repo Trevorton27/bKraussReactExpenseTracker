@@ -3,11 +3,11 @@ import React from 'react';
 class Table extends React.Component {
     render() {
         return (
-            <div>
+            <div className="expense-display">
                 <table className="expense-table">
                     <thead>
                         <tr>
-                            <th>Expense</th>
+                            <th>Date</th>
                             <th>Location</th>
                             <th>Amount</th>
                             <th>Description</th>
