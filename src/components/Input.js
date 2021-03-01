@@ -17,7 +17,7 @@ class Input extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const data = this.state;
-        localStorage.setItem('randomId', JSON.stringify(data));
+        localStorage.setItem('expense', JSON.stringify(data));
         document.querySelector('.input-field').reset();
     }
 
