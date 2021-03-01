@@ -16,9 +16,11 @@ class Input extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const data = this.state;
-        localStorage.setItem('expense', JSON.stringify(data));
-        document.querySelector('.input-field').reset();
+        const savedExpenses = JSON.parse(localStorage.getItem('expenseArray')) || [];
+        const newExpense = this.state;
+        savedExpenses.push(newExpense);
+        localStorage.setItem('expenseArray', JSON.stringify(savedExpenses));
+        this.setState();
     }
 
     handleChange(event) {
