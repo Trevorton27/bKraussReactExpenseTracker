@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Input from './components/Input';
 import Footer from './components/Footer';
 import Table from './components/Table';
+import "./Style.css"
 
 class App extends React.Component {
     constructor(props) {
@@ -21,6 +22,9 @@ class App extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const savedExpenses = JSON.parse(localStorage.getItem('expenseArray')) || [];
+        this.setState(() => ({
+            id: Math.random()
+        }))
         const newExpense = this.state;
         savedExpenses.push(newExpense);
         localStorage.setItem('expenseArray', JSON.stringify(savedExpenses));
