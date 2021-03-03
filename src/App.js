@@ -22,17 +22,20 @@ class App extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const expenseArray = this.state.expenseArray
-        const newExpense = {
-            id: Math.random(),
-            date: this.state.date,
-            location: this.state.location,
-            amount: this.state.amount,
-            description: this.state.description,
+        const isFormFilled = (this.state.date !== "" && this.state.location !== "" && this.state.amount !== "" && this.state.description !== "");
+        if (isFormFilled) {
+            const expenseArray = this.state.expenseArray
+            const newExpense = {
+                id: Math.random(),
+                date: this.state.date,
+                location: this.state.location,
+                amount: this.state.amount,
+                description: this.state.description,
+            }
+            expenseArray.push(newExpense);
+            console.log(expenseArray);
+            this.resetForm();
         }
-        expenseArray.push(newExpense);
-        console.log(expenseArray);
-        this.resetForm();
     }
 
     resetForm() {

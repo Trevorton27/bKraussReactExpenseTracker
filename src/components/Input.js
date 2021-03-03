@@ -39,8 +39,7 @@ function Input(props) {
                 />
 
 
-                <button
-                    type="submit">
+                <button>
                     Add to list
                     </button>
             </form>
