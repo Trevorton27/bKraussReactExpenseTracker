@@ -9,11 +9,12 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: Math.random(),
+            id: "",
             date: "",
             location: "",
             amount: "",
             description: "",
+            expenseArray: [],
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -21,21 +22,39 @@ class App extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const savedExpenses = JSON.parse(localStorage.getItem('expenseArray')) || [];
-        this.setState(() => ({
-            id: Math.random()
-        }))
-        const newExpense = this.state;
-        savedExpenses.push(newExpense);
-        localStorage.setItem('expenseArray', JSON.stringify(savedExpenses));
-        this.setState();
+        const expenseArray = this.state.expenseArray
+        const newExpense = {
+            id: Math.random(),
+            date: this.state.date,
+            location: this.state.location,
+            amount: this.state.amount,
+            description: this.state.description,
+        }
+        expenseArray.push(newExpense);
+        console.log(expenseArray);
+        this.resetForm();
+    }
+
+    resetForm() {
+        this.setState({
+            date: "",
+            location: "",
+            amount: "",
+            description: "",
+        })
     }
 
     handleChange(event) {
+        const { name, value } = event.target;
         this.setState({
-            [event.target.name]: event.target.value
+            [name]: value,
         })
     }
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div>
@@ -43,8 +62,11 @@ class App extends React.Component {
                 <Input
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
+                    data={this.state}
                 />
-                <Table />
+                <Table
+                    expenseArray={this.state.expenseArray}
+                />
                 <Footer />
             </div>
         )

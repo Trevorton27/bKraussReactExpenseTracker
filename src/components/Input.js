@@ -8,12 +8,14 @@ function Input(props) {
                 <input
                     type="date"
                     name="date"
+                    value={props.data.date}
                     onChange={props.handleChange}
                 />
                 <input
                     type="text"
                     name="location"
                     placeholder="Enter expense location"
+                    value={props.data.location}
                     onChange={props.handleChange}
                 />
 
@@ -23,6 +25,7 @@ function Input(props) {
                     name="amount"
                     placeholder="Enter an amount"
                     step="0.01"
+                    value={props.data.amount}
                     onChange={props.handleChange}
                 />
 
@@ -31,6 +34,7 @@ function Input(props) {
                     type="text"
                     name="description"
                     placeholder="Expense description"
+                    value={props.data.description}
                     onChange={props.handleChange}
                 />
 
