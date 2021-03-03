@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Input from './components/Input';
-import Footer from './components/Footer';
 import Table from './components/Table';
 import "./Style.css"
 
@@ -18,6 +17,7 @@ class App extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.deleteRow = this.deleteRow.bind(this)
     }
 
     handleSubmit(event) {
@@ -54,6 +54,19 @@ class App extends React.Component {
         })
     }
 
+    deleteRow(e) {
+        const expenseArray = this.state.expenseArray
+        const target = parseFloat(e.target.id);
+        for (let i = 0; i < expenseArray.length; i++) {
+            if (target === expenseArray[i].id) {
+                expenseArray.splice(i, 1);
+            }
+        }
+        this.setState({
+            expenseArray: expenseArray,
+        });
+    }
+
     componentDidMount() {
 
     }
@@ -69,8 +82,8 @@ class App extends React.Component {
                 />
                 <Table
                     expenseArray={this.state.expenseArray}
+                    deleteRow={this.deleteRow}
                 />
-                <Footer />
             </div>
         )
     }

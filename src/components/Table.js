@@ -8,8 +8,16 @@ function Table(props) {
             <tr key={item.id}>
                 <td>{item.date} </td>
                 <td>{item.location}</td>
-                <td>{item.amount}</td>
+                <td>${item.amount}</td>
                 <td>{item.description}</td>
+                <td className="delete-column">
+                    <button
+                        id={item.id}
+                        onClick={props.deleteRow}
+                        className="delete-button">
+                        X
+                    </button>
+                </td>
             </tr>
         )
     })
