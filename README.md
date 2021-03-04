@@ -2,7 +2,7 @@
 
 ### An Expense Tracker created with HTML, CSS, Javascript, React, and Bootstrap.
 
-### See it [here](https://bryangk.github.io/expense_tracker_react/)
+### See it [here](https://aqueous-brushlands-14775.herokuapp.com//)
 
 ![](./expense_tracker_react.jpg)
 
