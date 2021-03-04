@@ -1,10 +1,23 @@
+body {
+    font-family: open sans, Arial, Helvetica, sans-serif;
+    color: #4c4c4c;
+    background-color: #f8d10c8c;
+}
+
 .form-container {
     max-width: 400px;
 }
 
+h1 {
+    color: #D9740B;
+    font-size: 4em;
+    text-shadow: 2px 2px 2px #4c4c4c;
+}
+
 .header {
+    font-family: Fascinate, Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
 }
 
 .delete-column {

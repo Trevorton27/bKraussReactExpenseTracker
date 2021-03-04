@@ -62,7 +62,7 @@ function Input(props) {
                 
                 <div className="row">
                     <div className="col-6 offset-5" style={{ marginTop: 20 }}>
-                        <button className="btn btn-primary">
+                        <button className="btn btn-success">
                             Add to list
                     </button>
                     </div>

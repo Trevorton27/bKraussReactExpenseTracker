@@ -23,8 +23,8 @@ function Table(props) {
 
     return (
         <div className="container expense-table">
-            <table className="table table-striped">
-                <thead>
+            <table className="table table-striped table-warning">
+                <thead className="table-success">
                     <tr>
                         <th scope="col">Date</th>
                         <th scope="col">Location</th>
