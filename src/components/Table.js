@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Table(props) {
+
     const expenseArray = props.expenseArray
     const tableRow = expenseArray.map(item => {
         return (
@@ -20,7 +21,6 @@ function Table(props) {
             </tr>
         )
     })
-
     return (
         <div className="container expense-table">
             <table className="table table-striped table-warning">

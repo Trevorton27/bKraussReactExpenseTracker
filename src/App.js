@@ -5,6 +5,7 @@ import Table from './components/Table';
 
 
 class App extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {

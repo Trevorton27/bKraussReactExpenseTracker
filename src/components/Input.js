@@ -30,8 +30,6 @@ function Input(props) {
                         />
                     </div>
                 </div>
-
-
                 <div className="form-group row" style={{ marginTop: 20 }}>
                     <label className="col-sm-3 col-form-label">Amount:</label>
                     <div className="col-sm-9">
@@ -59,7 +57,6 @@ function Input(props) {
                         />
                     </div>
                 </div>
-                
                 <div className="row">
                     <div className="col-6 offset-5" style={{ marginTop: 20 }}>
                         <button className="btn btn-success">
