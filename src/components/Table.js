@@ -1,20 +1,19 @@
 import React from 'react';
 
 function Table(props) {
-
     const expenseArray = props.expenseArray
     const tableRow = expenseArray.map(item => {
         return (
             <tr key={item.id}>
-                <td>{item.date} </td>
-                <td>{item.location}</td>
-                <td>${item.amount}</td>
-                <td>{item.description}</td>
+                <td className="align-middle">{item.date} </td>
+                <td className="align-middle">{item.location}</td>
+                <td className="align-middle">${item.amount}</td>
+                <td className="align-middle">{item.description}</td>
                 <td className="delete-column">
                     <button
                         id={item.id}
                         onClick={props.deleteRow}
-                        className="delete-button">
+                        className="btn btn-danger align-middle btn-sm">
                         X
                     </button>
                 </td>
@@ -23,14 +22,14 @@ function Table(props) {
     })
 
     return (
-        <div className="expense-display">
-            <table className="expense-table">
+        <div className="container expense-table">
+            <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Amount</th>
-                        <th>Description</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Description</th>
                     </tr>
                 </thead>
                 <tbody>
