@@ -1,6 +1,6 @@
 # Expense Tracker with React
 
-### An Expense Tracker created with HTML, CSS, Javascript, and React.
+### An Expense Tracker created with HTML, CSS, Javascript, React, and Bootstrap.
 
 ### See it [here](https://bryangk.github.io/expense_tracker_react/)
 
