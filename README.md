@@ -4,7 +4,7 @@
 
 ### See it [here](https://bryangk.github.io/expense_tracker_react/)
 
-![](./expense_tracker_react.png)
+![](./expense_tracker_react.jpg)
 
 ## Summary
 
