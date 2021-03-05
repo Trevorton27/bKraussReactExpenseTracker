@@ -1,33 +1,49 @@
 body {
-    font-family: open sans, Arial, Helvetica, sans-serif;
-    color: #4c4c4c;
-    background-color: #f8d10c8c;
+  font-family: open sans, Arial, Helvetica, sans-serif;
+  color: #4c4c4c;
+  background-color: #f8d10c8c;
 }
 
 .form-container {
-    max-width: 400px;
+  max-width: 400px;
 }
 
+.form-group {
+  margin-top: 20px;
+}
+
+.col-6 {
+  margin-top: 20px;
+}
 h1 {
-    color: #D9740B;
-    font-size: 4em;
-    text-shadow: 2px 2px 2px #4c4c4c;
+  color: #d9740b;
+  font-size: 4em;
+  text-shadow: 2px 2px 2px #4c4c4c;
 }
 
 .header {
-    font-family: Fascinate, Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 20px 0 40px 0;
+  font-family: Fascinate, Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 20px 0 40px 0;
 }
 
-.delete-column {
-    margin-top: 1px;
-    border: none;
-    float: left;
-    max-width: 55px;
-    padding: 0px;
+td.delete-column {
+  margin-top: 5px;
+  border: none;
+  float: left;
+  max-width: 55px;
+  padding: 0px;
+  margin-left: 5px;
 }
 
 .expense-table {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.table-success {
+  text-align: center;
+}
+
+.tableRow {
+  text-align: center;
 }

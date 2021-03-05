@@ -1,15 +1,12 @@
 import React from 'react';
 
-class Header extends React.Component {
+const Header = () => {
+  return (
+    <div className='header'>
+      <h1>Expense Tracker</h1>
+      <hr />
+    </div>
+  );
+};
 
-    render() {
-        return (
-            <div className="header">
-                <h1>Expense Tracker</h1>
-                <hr />
-            </div>
-        )
-    }
-}
-
-export default Header
+export default Header;
